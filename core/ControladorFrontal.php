@@ -5,4 +5,6 @@ class ControladorFrontal{
     
 }
 
+$controlador = new ControladorFrontal();
+
 ?>

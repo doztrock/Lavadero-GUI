@@ -17,25 +17,35 @@ if(Configuracion::ENTORNO == Configuracion::DESARROLLO){
         <link type="text/css" rel="stylesheet" href="core/static/css/static.css">
         <script type="text/javascript" src="core/static/js/jquery.js"></script>
         <script type="text/javascript" src="core/static/js/static.js"></script>
+        <script type="text/javascript">
+        
+            $(document).ready(function(){
+                
+                $(".item").click(function(){
+                    alert($(this).attr("module"));
+                });
+                
+            });
+        </script>
     </head>
     <body>
         
         <!--Menu Principal-->
         <div id="menu">
             
-            <div id="item">
+            <div class="item" module="cliente">
                 Clientes
             </div>
             
-            <div id="item">
+            <div class="item" module="vehiculo">
                 Vehiculos
             </div>
             
-            <div id="item">
+            <div class="item" module="servicio">
                 Servicios
             </div>
             
-            <div id="item">
+            <div class="item" module="configuracion">
                 Configuracion
             </div>
             
