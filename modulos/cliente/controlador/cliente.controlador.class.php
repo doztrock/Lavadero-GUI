@@ -1,5 +1,11 @@
 <?php
 
-echo "Hola";
+class Cliente{
+    
+    public function iniciar(){
+        echo "Hola";
+    }
+    
+}
 
 ?>

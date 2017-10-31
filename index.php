@@ -22,10 +22,19 @@ if(Configuracion::ENTORNO == Configuracion::DESARROLLO){
             $(document).ready(function(){
                 
                 $(".item").click(function(){
-                    alert($(this).attr("module"));
+                    
+                    var modulo = $(this).attr("module");
+                    var accion = "iniciar";
+                    
+                    $("#contenido").load("/core/ControladorFrontal.php",{
+                        "modulo": modulo,
+                        "accion": accion
+                    });
+                    
                 });
                 
             });
+
         </script>
     </head>
     <body>
