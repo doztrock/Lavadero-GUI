@@ -14,7 +14,7 @@ class ControladorFrontal{
         $accion = $_POST["accion"];
         
         /* Incluimos el controlador */
-        require("../modulos/$modulo/controlador/$modulo.controlador.class.php");
+        require(__DIR__ . "/../modulos/$modulo/controlador/$modulo.controlador.class.php");
         
         /* Creamos el objeto */
         $controlador = new $modulo();
