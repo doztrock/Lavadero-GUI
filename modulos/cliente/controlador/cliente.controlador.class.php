@@ -1,5 +1,12 @@
 <?php
 
+/**
+ *  Controlador
+ * 
+ *  Objetivo:   Servir de intermediario entre el modelo y la vista.
+ * 
+ */
+
 /* Incluimos el modelo */
 require(__DIR__ . "/../modelo/cliente.modelo.class.php");
 

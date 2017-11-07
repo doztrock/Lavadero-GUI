@@ -9,7 +9,13 @@
 
 ?>
 
-<h2>HOLA MUNDO</h2>
-<?php
-echo $prueba
-?>
+<html>
+    <body>
+        
+        
+        Aca se mostraran los resultado
+        
+        
+        
+    </body>
+</html>
