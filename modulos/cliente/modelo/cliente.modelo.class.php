@@ -13,6 +13,14 @@ class ModeloCliente{
         return "MENSAJE DE PRUEBA";
     }
     
+    /**
+     * Obtiene el listado de clientes
+     */
+    public function obtenerListado(){
+        
+    }
+    
+    
 }
 
 ?>

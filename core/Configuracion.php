@@ -13,10 +13,10 @@ class Configuracion{
     const ENTORNO = DESARROLLO;
     
     /* Conexion a DB */
-    const DB_HOST = "";
-    const DB_USUARIO = "";
+    const DB_HOST = "localhost";
+    const DB_USUARIO = "root";
     const DB_CLAVE = "";
-    const DB_NOMBRE = "";
+    const DB_NOMBRE = "c9";
     
     /* Informacion */
     const SOFTWARE_NOMBRE = "AutoLimpio";

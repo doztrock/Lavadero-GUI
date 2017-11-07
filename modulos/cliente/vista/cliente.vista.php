@@ -11,11 +11,12 @@
 
 <html>
     <body>
+
+
+    <!-- Listado de clientes -->
+    <table border=1>
         
-        
-        Aca se mostraran los resultado
-        
-        
-        
+    </table>
+
     </body>
 </html>

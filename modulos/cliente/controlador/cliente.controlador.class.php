@@ -8,7 +8,7 @@
  */
 
 /* Incluimos el modelo */
-require(__DIR__ . "/../modelo/cliente.modelo.class.php");
+require_once(__DIR__ . "/../modelo/cliente.modelo.class.php");
 
 class Cliente{
     
@@ -33,7 +33,7 @@ class Cliente{
         $prueba = $this->modelo->prueba();
         
         /* Incluimos la vista y mostramos los resultados */
-        require(__DIR__ . "/../vista/cliente.vista.php");
+        require_once(__DIR__ . "/../vista/cliente.vista.php");
         
     }
     
