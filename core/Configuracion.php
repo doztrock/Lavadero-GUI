@@ -14,9 +14,9 @@ class Configuracion{
     
     /* Conexion a DB */
     const DB_HOST = "localhost";
-    const DB_USUARIO = "root";
-    const DB_CLAVE = "";
-    const DB_NOMBRE = "c9";
+    const DB_USUARIO = "lavaderouser";
+    const DB_CLAVE = "PwRmgGeb6QBikRy6wWCbHAnTydXX70uK";
+    const DB_NOMBRE = "lavadero";
     
     /* Informacion */
     const SOFTWARE_NOMBRE = "AutoLimpio";

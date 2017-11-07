@@ -38,8 +38,10 @@ class Cliente{
          * Hacemos uso de las funciones del modelo
          */
          
-       // $prueba = $this->modelo->prueba();
+        // Obtenemos el listado de clientes
+        $listadoClientes = $this->modelo->obtenerListado();
         
+         
         /* Incluimos la vista y mostramos los resultados */
         require_once(__DIR__ . "/../vista/cliente.vista.php");
         
