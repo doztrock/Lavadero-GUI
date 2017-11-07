@@ -15,7 +15,12 @@ class Cliente{
     /* Modelo */
     private $modelo;
     
-    public function __contruct(){
+    /* Database */
+    private $database;
+    
+    /* Constructor */
+    public function __contruct($database){
+        $this->database = $database;
     }
     
     /**
@@ -27,10 +32,13 @@ class Cliente{
     public function iniciar(){
         
         /* Invocamos los modelos */
-        $this->modelo = new ModeloCliente();
+        $this->modelo = new ModeloCliente($this->database);
         
-        /* Hacemos uso de las funciones del modelo */
-        $prueba = $this->modelo->prueba();
+        /**
+         * Hacemos uso de las funciones del modelo
+         */
+         
+       // $prueba = $this->modelo->prueba();
         
         /* Incluimos la vista y mostramos los resultados */
         require_once(__DIR__ . "/../vista/cliente.vista.php");

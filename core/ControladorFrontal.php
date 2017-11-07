@@ -19,7 +19,6 @@ class ControladorFrontal{
         $database = new Database(Configuracion::DB_HOST, Configuracion::DB_USUARIO, Configuracion::DB_CLAVE, Configuracion::DB_NOMBRE);
         $database->conectar();
         
-        return;
     }
     
     public function iniciar(){
@@ -32,7 +31,7 @@ class ControladorFrontal{
         require(__DIR__ . "/../modulos/$modulo/controlador/$modulo.controlador.class.php");
         
         /* Creamos el objeto */
-        $controlador = new $modulo();
+        $controlador = new $modulo($this->database);
         
         /* Ejecutamos la accion */
         $controlador->$accion();

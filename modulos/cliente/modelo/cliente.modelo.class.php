@@ -9,10 +9,13 @@
 
 class ModeloCliente{
     
-    public function prueba(){
-        return "MENSAJE DE PRUEBA";
-    }
+    /* Database */
+    private $database;
     
+    public function __contruct($database){
+        $this->database = $database;
+    }
+   
     /**
      * Obtiene el listado de clientes
      */
