@@ -26,7 +26,7 @@ if(Configuracion::ENTORNO == Configuracion::DESARROLLO){
                     var modulo = $(this).attr("module");
                     var accion = "iniciar";
                     
-                    $("#contenido").load("/core/ControladorFrontal.php",{
+                    $("#contenido").load("core/ControladorFrontal.php",{
                         "modulo": modulo,
                         "accion": accion
                     });
