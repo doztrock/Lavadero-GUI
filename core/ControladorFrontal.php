@@ -16,8 +16,8 @@ class ControladorFrontal{
     /* Constructor */
     public function __construct(){
         
-        $database = new Database(Configuracion::DB_HOST, Configuracion::DB_USUARIO, Configuracion::DB_CLAVE, Configuracion::DB_NOMBRE);
-        $database->conectar();
+        $this->database = new Database(Configuracion::DB_HOST, Configuracion::DB_USUARIO, Configuracion::DB_CLAVE, Configuracion::DB_NOMBRE);
+        $this->database->conectar();
         
     }
     

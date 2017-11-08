@@ -6,7 +6,6 @@
  *  Objetivo:   Realizar operaciones con la base de datos.
  * 
  */
-
 class ModeloCliente{
     
     /* Database */
@@ -21,7 +20,7 @@ class ModeloCliente{
      * Obtiene el listado de clientes
      */
     public function obtenerListado(){
-        return array(array("0", "Pepito", "123154"));
+        return $this->database->consulta("SELECT cedula, nombre, telefono FROM Cliente");
     }
     
     

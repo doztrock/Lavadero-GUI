@@ -20,7 +20,14 @@ class Cliente{
     
     /* Constructor */
     public function __contruct($database){
+        
         $this->database = $database;
+        
+        /* Invocamos los modelos */
+        $this->modelo = new ModeloCliente($this->database);
+        
+        print_r($this->modelo);
+        
     }
     
     /**
@@ -31,16 +38,14 @@ class Cliente{
      */
     public function iniciar(){
         
-        /* Invocamos los modelos */
-        $this->modelo = new ModeloCliente($this->database);
-        
         /**
          * Hacemos uso de las funciones del modelo
          */
          
+         print_r($this->modelo);
+         
         // Obtenemos el listado de clientes
-        $listadoClientes = $this->modelo->obtenerListado();
-        
+        //$listadoClientes = $this->modelo->obtenerListado();
          
         /* Incluimos la vista y mostramos los resultados */
         require_once(__DIR__ . "/../vista/cliente.vista.php");
