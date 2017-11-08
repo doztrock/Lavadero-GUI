@@ -12,7 +12,7 @@ class ModeloCliente{
     private $database;
     
     /* Constructor */
-    public function __contruct($database){
+    public function __construct($database){
         $this->database = $database;
     }
    
