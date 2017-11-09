@@ -61,6 +61,15 @@
         ?>
     </table>
     
+    <!-- Resultado del registro de cliente -->
+    <?php
+    
+        if(isset($resultado)){
+            print $resultado . "<br>";
+        }
+    
+    ?>
+    
     <!-- Boton "Registrar Cliente" -->
     <input type="button" id="boton_registrar_cliente" value="Registrar Cliente">
 

@@ -23,6 +23,12 @@ class ModeloCliente{
         return $this->database->consulta("SELECT cedula, nombre, telefono FROM Cliente");
     }
     
+    /**
+     *  Guardar la informacion del cliente
+     */
+    public function guardar($cedula, $nombre, $telefono){
+        return "Cliente registrado exitosamente";
+    }
     
 }
 

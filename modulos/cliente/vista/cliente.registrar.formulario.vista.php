@@ -16,18 +16,26 @@
             $(document).ready(function(){
                 
                 $("#boton_cancelar").click(function(){
-                    $("#contenido").hide();
-                    $("#menu").show();
-                });
-                
-                $("#boton_guardar").click(function(){
-                
+                    
                     var modulo = "cliente";
-                    var accion = "registrar";
+                    var accion = "iniciar";
                     
                     $("#contenido").load("core/ControladorFrontal.php",{
                         "modulo": modulo,
                         "accion": accion
+                    });
+                    
+                });
+                
+                $("#boton_guardar").click(function(){
+    
+                    var modulo = "cliente";
+                    var accion = "guardar";
+
+                    $("#contenido").load("core/ControladorFrontal.php",{
+                        "modulo": modulo,
+                        "accion": accion,
+                        "informacion": JSON.stringify($("#formulario").serializeArray())
                     });
                     
                 });
@@ -39,7 +47,7 @@
     <body>
 
     <!-- Formulario de Registro -->
-    <form>
+    <form id="formulario">
         Cedula: <input type="text" name="cedula">
         Nombre: <input type="text" name="nombre">
         Telefono: <input type="text" name="telefono">
