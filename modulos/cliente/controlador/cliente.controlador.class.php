@@ -49,6 +49,19 @@ class Cliente{
         
     }
     
+    /**
+     *  Funcion:    registrar()
+     * 
+     *  Objetivo:   Iniciar la interfaz grafica del registro de cliente.
+     * 
+     */
+    public function registrar(){
+
+        /* Incluimos la vista y mostramos el formulario */
+        require_once(__DIR__ . "/../vista/cliente.registrar.formulario.vista.php");
+
+    }
+    
 }
 
 ?>

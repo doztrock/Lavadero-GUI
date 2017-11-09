@@ -20,6 +20,23 @@
                     $("#menu").show();
                 });
                 
+                $("#boton_nuevo_cliente").click(function(){
+                    $("#contenido").hide();
+                    $("#menu").show();
+                });
+                
+                $("#boton_registrar_cliente").click(function(){
+                
+                    var modulo = "cliente";
+                    var accion = "registrar";
+                    
+                    $("#contenido").load("core/ControladorFrontal.php",{
+                        "modulo": modulo,
+                        "accion": accion
+                    });
+                    
+                });
+                
             });
 
         </script>
@@ -43,6 +60,9 @@
             }
         ?>
     </table>
+    
+    <!-- Boton "Registrar Cliente" -->
+    <input type="button" id="boton_registrar_cliente" value="Registrar Cliente">
 
     </body>
 </html>

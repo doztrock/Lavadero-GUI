@@ -7,12 +7,7 @@ class ControladorFrontal{
     
     /* Database */
     private $database;
-    
-    /* Modulos soportados */
-    private $MODULO = array(
-        "cliente"
-    );
-    
+
     /* Constructor */
     public function __construct(){
         
