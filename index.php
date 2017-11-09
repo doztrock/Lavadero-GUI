@@ -16,10 +16,15 @@ if(Configuracion::ENTORNO == Configuracion::DESARROLLO){
         </title>
         <link type="text/css" rel="stylesheet" href="core/static/css/static.css">
         <script type="text/javascript" src="core/static/js/jquery.js"></script>
-        <script type="text/javascript" src="core/static/js/static.js"></script>
         <script type="text/javascript">
         
             $(document).ready(function(){
+                
+                $("#boton_volver").click(function(){
+                    alert(2);
+                    //$("#contenido").hide();
+                    //$("#menu").show();
+                });
                 
                 $(".item").click(function(){
                     
@@ -30,6 +35,9 @@ if(Configuracion::ENTORNO == Configuracion::DESARROLLO){
                         "modulo": modulo,
                         "accion": accion
                     });
+                    
+                    $("#contenido").show();
+                    $("#menu").hide();
                     
                 });
                 
