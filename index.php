@@ -20,12 +20,6 @@ if(Configuracion::ENTORNO == Configuracion::DESARROLLO){
         
             $(document).ready(function(){
                 
-                $("#boton_volver").click(function(){
-                    alert(2);
-                    //$("#contenido").hide();
-                    //$("#menu").show();
-                });
-                
                 $(".item").click(function(){
                     
                     var modulo = $(this).attr("module");
