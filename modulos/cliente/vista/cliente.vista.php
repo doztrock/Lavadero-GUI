@@ -19,12 +19,7 @@
                     $("#contenido").hide();
                     $("#menu").show();
                 });
-                
-                $("#boton_nuevo_cliente").click(function(){
-                    $("#contenido").hide();
-                    $("#menu").show();
-                });
-                
+
                 $("#boton_registrar_cliente").click(function(){
                 
                     var modulo = "cliente";
@@ -65,7 +60,13 @@
     <?php
     
         if(isset($resultado)){
-            print $resultado . "<br>";
+            
+            if($resultado == TRUE){
+                print "Cliente registrado exitosamente.<br>";
+            }else{
+                print "Ha ocurrido un error.<br>";
+            }
+            
         }
     
     ?>

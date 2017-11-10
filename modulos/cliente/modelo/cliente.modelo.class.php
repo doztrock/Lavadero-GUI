@@ -27,7 +27,12 @@ class ModeloCliente{
      *  Guardar la informacion del cliente
      */
     public function guardar($cedula, $nombre, $telefono){
-        return "Cliente registrado exitosamente";
+        
+        $resultado = $this->database->consulta(
+            sprintf("INSERT INTO Cliente (cedula, nombre, telefono) VALUES ('%s', '%s', '%s')", $cedula, $nombre, $telefono)
+        );
+        
+        return $resultado;
     }
     
 }
