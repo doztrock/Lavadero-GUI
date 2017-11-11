@@ -3,7 +3,7 @@
 /**
  *  Vista
  * 
- *  Objetivo:   Mostrar el formulario de registro de cliente.
+ *  Objetivo:   Mostrar el formulario de registro de servicio.
  * 
  */
 
@@ -17,7 +17,7 @@
                 
                 $("#boton_cancelar").click(function(){
                     
-                    var modulo = "cliente";
+                    var modulo = "servicio";
                     var accion = "iniciar";
                     
                     $("#contenido").load("core/ControladorFrontal.php",{
@@ -29,7 +29,7 @@
                 
                 $("#boton_guardar").click(function(){
     
-                    var modulo = "cliente";
+                    var modulo = "servicio";
                     var accion = "guardar";
 
                     $("#contenido").load("core/ControladorFrontal.php",{
@@ -48,9 +48,9 @@
 
     <!-- Formulario de Registro -->
     <form id="formulario">
-        Cedula: <input type="text" name="cedula">
-        Nombre: <input type="text" name="nombre">
-        Telefono: <input type="text" name="telefono">
+        Tipo: <input type="text" name="tipo">
+        Duracion: <input type="text" name="duracion">
+        Precio: <input type="text" name="precio">
     </form>
 
     <!-- Boton "Cancelar" -->
