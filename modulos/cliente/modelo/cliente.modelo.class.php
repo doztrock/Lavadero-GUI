@@ -20,7 +20,7 @@ class ModeloCliente{
      * Obtiene el listado de clientes
      */
     public function obtenerListado(){
-        return $this->database->consulta("SELECT cedula, nombre, telefono FROM Cliente");
+        return $this->database->consulta("SELECT identificador, cedula, nombre, telefono FROM Cliente");
     }
     
     /**
