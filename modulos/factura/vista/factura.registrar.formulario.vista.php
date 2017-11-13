@@ -17,7 +17,7 @@
                 
                 $("#boton_cancelar").click(function(){
                     
-                    var modulo = "cliente";
+                    var modulo = "factura";
                     var accion = "iniciar";
                     
                     $("#contenido").load("core/ControladorFrontal.php",{
@@ -29,7 +29,7 @@
                 
                 $("#boton_guardar").click(function(){
     
-                    var modulo = "cliente";
+                    var modulo = "factura";
                     var accion = "guardar";
 
                     $("#contenido").load("core/ControladorFrontal.php",{
@@ -40,6 +40,62 @@
                     
                 });
                 
+                $("select[name=identificador_cliente]").on('change', function() {
+                
+                    var modulo = "vehiculo";
+                    var accion = "consultarPropietario";
+
+                    $.ajax({
+                        url: "core/ControladorFrontal.php",
+                        type: "POST",
+                        data: {
+                            "modulo": modulo,
+                            "accion": accion,
+                            "identificador_cliente": this.value
+                        },success: function(data){
+
+                            if(data.length > 0){
+                                
+                                $("select[name=identificador_vehiculo]").empty();
+
+                                $.each(data, function (identificador, vehiculo) {
+
+                                    $("select[name=identificador_vehiculo]").append(
+                                    $('<option>', 
+                                        {
+                                            value: identificador,
+                                            text: vehiculo.placa
+                                        })
+                                    );
+                                    
+                                });
+                                
+                                $("#boton_guardar").prop("disabled", false);
+                                $("select[name=identificador_vehiculo]").prop("disabled", false);
+                                
+                            }else{
+                                
+                                $("select[name=identificador_vehiculo]").empty();
+                                
+                                $("select[name=identificador_vehiculo]").append(
+                                $('<option>', 
+                                    {
+                                        value: 0,
+                                        text: 'No Existe'
+                                    })
+                                );
+                                
+                                $("#boton_guardar").prop("disabled", true);
+                                $("select[name=identificador_vehiculo]").prop("disabled", true);
+                                
+                            }
+                            
+                        }
+                        
+                    });
+                    
+                });
+
             });
 
         </script>
@@ -48,14 +104,14 @@
 
     <!-- Formulario de Registro -->
     <form id="formulario">
-        Cedula: <input type="text" name="cedula">
-        Nombre: <input type="text" name="nombre">
-        Telefono: <input type="text" name="telefono">
         
+        Fecha: <input type="text" name="cedula">
         
         <!-- Listado de clientes -->
         Cliente:
         <select name="identificador_cliente">
+            
+            <option value="0">Seleccione...</option>
             <?php
                 foreach($listadoClientes as $cliente){
                 ?>
@@ -65,6 +121,13 @@
                 <?php
             }
             ?>
+            
+        </select>
+        
+        <!-- Listado de vehiculos -->
+        Vehiculo:
+        <select name="identificador_vehiculo" disabled>
+            <option value="0">Seleccione...</option>
         </select>
         
     </form>
@@ -73,7 +136,7 @@
     <input type="button" id="boton_cancelar" value="Cancelar">
 
     <!-- Boton "Guardar" -->
-    <input type="button" id="boton_guardar" value="Guardar">
+    <input type="button" id="boton_guardar" value="Guardar" disabled>
 
     </body>
 </html>

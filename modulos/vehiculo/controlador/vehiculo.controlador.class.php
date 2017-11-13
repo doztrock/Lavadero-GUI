@@ -106,6 +106,30 @@ class Vehiculo{
 
     }
     
+    /**
+     *  Funcion:    consultarPropietario()
+     * 
+     *  Objetivo:   Consultar los vehiculos pertenecientes a un cliente.
+     * 
+     */
+    public function consultarPropietario(){
+
+        /* Obtenemos el identificador del cliente */
+        $identificador_cliente = $_POST["identificador_cliente"];
+
+        /**
+         * Hacemos uso de las funciones del modelo
+         */
+         
+            // Obtenemos el listado de vehiculos
+            $listadoVehiculos = $this->modelo->obtenerListadoPorCliente($identificador_cliente);
+
+
+        /* Incluimos la vista y mostramos el formulario */
+        require_once(__DIR__ . "/../vista/vehiculos.json.php");
+
+    }
+    
 }
 
 ?>

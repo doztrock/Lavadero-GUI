@@ -35,6 +35,21 @@ class ModeloVehiculo{
         return $resultado;
     }
     
+    /**
+     * Obtiene el listado de vehiculos basado en el identificador del cliente
+     */
+    public function obtenerListadoPorCliente($identificador_cliente){
+        
+        $resultado = $this->database->consulta(sprintf(
+            "SELECT Vehiculo.identificador, Vehiculo.placa 
+             FROM Vehiculo 
+             INNER JOIN Cliente ON Cliente.identificador = Vehiculo.identificador_cliente 
+             WHERE Vehiculo.identificador_cliente = %d", $identificador_cliente
+        ));
+        
+        return $resultado;
+    }
+    
 }
 
 ?>
