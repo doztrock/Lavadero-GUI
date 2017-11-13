@@ -77,9 +77,10 @@ class Factura{
     /**
      *  Funcion:    guardar()
      * 
-     *  Objetivo:   Guardar la informacion del registro de cliente.
+     *  Objetivo:   Guardar la informacion del registro de factura.
      * 
      */
+     /*
     public function guardar(){
 
         $informacion = json_decode($_POST["informacion"]);
@@ -87,23 +88,23 @@ class Factura{
 
         foreach($informacion as $dato){
             $cliente[$dato->name] = $dato->value;
-        }
+        }*/
 
         /**
          * Hacemos uso de las funciones del modelo
          */
-         
+         /*
             // Guardamos la informacion del cliente
             $resultado = $this->modelo->guardar($cliente["cedula"], $cliente["nombre"], $cliente["telefono"]);
 
             // Obtenemos el listado de clientes
             $listadoClientes = $this->modelo->obtenerListado();
-            
+            */
 
         /* Incluimos la vista y mostramos los resultados */
-        require_once(__DIR__ . "/../vista/cliente.vista.php");
+      /*  require_once(__DIR__ . "/../vista/cliente.vista.php");
 
-    }
+    }*/
     
 }
 
