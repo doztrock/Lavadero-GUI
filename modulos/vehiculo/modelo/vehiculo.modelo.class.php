@@ -20,7 +20,7 @@ class ModeloVehiculo{
      * Obtiene el listado de vehiculos
      */
     public function obtenerListado(){
-        return $this->database->consulta("SELECT Vehiculo.placa, Vehiculo.modelo, Vehiculo.color, Cliente.nombre AS nombre_cliente FROM Vehiculo INNER JOIN Cliente ON Vehiculo.identificador_cliente = Cliente.identificador");
+        return $this->database->consulta("SELECT Vehiculo.identificador, Vehiculo.placa, Vehiculo.modelo, Vehiculo.color, Cliente.nombre AS nombre_cliente FROM Vehiculo INNER JOIN Cliente ON Vehiculo.identificador_cliente = Cliente.identificador");
     }
     
     /**

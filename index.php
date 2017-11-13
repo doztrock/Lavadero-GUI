@@ -56,8 +56,8 @@ if(Configuracion::ENTORNO == Configuracion::DESARROLLO){
                 Servicios
             </div>
             
-            <div class="item" module="configuracion">
-                Configuracion
+            <div class="item" module="factura">
+                Factura
             </div>
             
         </div>

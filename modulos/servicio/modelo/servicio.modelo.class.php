@@ -20,7 +20,7 @@ class ModeloServicio{
      * Obtiene el listado de servicios
      */
     public function obtenerListado(){
-        return $this->database->consulta("SELECT tipo, duracion, precio FROM ServicioTipo");
+        return $this->database->consulta("SELECT identificador, tipo, duracion, precio FROM ServicioTipo");
     }
     
     /**
