@@ -44,25 +44,35 @@ if(Configuracion::ENTORNO == Configuracion::DESARROLLO){
         <!--Menu Principal-->
         <div id="menu">
             
-            <div class="item" module="cliente">
-                Clientes
+            <!--Panel Izquierdo-->
+            <div id="panel_izquierdo">
+            
+                <div class="contenedor_boton_menu">
+                    <input type="button" class="item" module="cliente" value="Clientes">
+                </div> 
+
+                <div class="contenedor_boton_menu">
+                    <input type="button" class="item" module="vehiculo" value="Vehiculos">
+                </div>   
+            
             </div>
             
-            <div class="item" module="vehiculo">
-                Vehiculos
-            </div>
+            <!--Panel Derecho-->
+            <div id="panel_derecho">
             
-            <div class="item" module="servicio">
-                Servicios
-            </div>
+                <div class="contenedor_boton_menu">
+                    <input type="button" class="item" module="servicio" value="Servicios">
+                </div>                
             
-            <div class="item" module="factura">
-                Factura
+                <div class="contenedor_boton_menu">
+                    <input type="button" class="item" module="factura" value="Facturas">
+                </div> 
+            
             </div>
             
         </div>
         
-        <div id="contenido">
+        <div id="contenido" style="display:none">
         </div>
         
     </body>
