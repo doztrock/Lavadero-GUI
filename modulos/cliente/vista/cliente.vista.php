@@ -43,6 +43,11 @@
 
     <!-- Listado de clientes -->
     <table border=1>
+        <tr>
+            <th>Cedula</th>
+            <th>Nombre</th>
+            <th>Telefono</th>
+        </tr>
         <?php
             foreach($listadoClientes as $cliente){
             ?>

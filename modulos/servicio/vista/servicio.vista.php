@@ -43,13 +43,18 @@
 
     <!-- Listado de servicios -->
     <table border=1>
+        <tr>
+            <th>Servicio</th>
+            <th>Duracion (m)</th>
+            <th>Precio</th>
+        </tr>
         <?php
             foreach($listadoServicios as $servicio){
             ?>
             <tr>
                 <td><?php print $servicio["tipo"]; ?></td>
                 <td><?php print $servicio["duracion"]; ?></td>
-                <td><?php print $servicio["precio"]; ?></td>
+                <td><?php print "$" . $servicio["precio"]; ?></td>
             <tr>
             <?php
             }

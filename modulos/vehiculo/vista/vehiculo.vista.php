@@ -43,6 +43,12 @@
 
     <!-- Listado de vehiculos -->
     <table border=1>
+        <tr>
+            <th>Placa</th>
+            <th>Modelo</th>
+            <th>Color</th>
+            <th>Cliente</th>
+        </tr>
         <?php
             foreach($listadoVehiculos as $vehiculo){
             ?>
@@ -73,7 +79,7 @@
     ?>
     
     <!-- Boton "Registrar vehiculo" -->
-    <input type="button" id="boton_registrar_vehiculo" value="Registrar vehiculo">
+    <input type="button" id="boton_registrar_vehiculo" value="Registrar Vehiculo">
 
     </body>
 </html>
