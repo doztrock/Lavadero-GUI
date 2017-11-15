@@ -39,10 +39,10 @@
     <body>
 
     <!-- Boton "Volver" -->
-    <input type="button" id="boton_volver" value="Volver">
+    <input type="button" id="boton_volver" value="">
 
     <!-- Listado de facturas -->
-    <table border=1>
+    <table border=1 id="tabla_factura">
         <?php
             foreach($listadoFacturas as $factura){
             ?>

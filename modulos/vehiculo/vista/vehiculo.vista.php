@@ -39,10 +39,10 @@
     <body>
 
     <!-- Boton "Volver" -->
-    <input type="button" id="boton_volver" value="Volver">
+    <input type="button" id="boton_volver" value="">
 
     <!-- Listado de vehiculos -->
-    <table border=1>
+    <table border=1 id="tabla_factura">
         <tr>
             <th>Placa</th>
             <th>Modelo</th>
