@@ -132,11 +132,16 @@
         
     </form>
 
-    <!-- Boton "Cancelar" -->
-    <input type="button" id="boton_cancelar" value="Cancelar">
+    <!-- Botones -->
+    <div class="contenedor_botones">
 
-    <!-- Boton "Guardar" -->
-    <input type="button" id="boton_guardar" value="Guardar" disabled>
+        <!-- Boton "Cancelar" -->
+        <input type="button" id="boton_cancelar" value="">
+
+        <!-- Boton "Guardar" -->
+        <input type="button" id="boton_guardar" value="">
+    
+    </div>
 
     </body>
 </html>
