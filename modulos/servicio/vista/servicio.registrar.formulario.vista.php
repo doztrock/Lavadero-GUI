@@ -84,10 +84,5 @@
     
     </div>
 
-    <!-- Fila de Servicios -->
-    <tr id="fila_servicio">
-        <td></td>
-    </tr>
-
     </body>
 </html>

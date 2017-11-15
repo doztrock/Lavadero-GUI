@@ -101,34 +101,45 @@
         </script>
     </head>
     <body>
+        
+    <!-- Titulo -->
+    <div class="contenedor_titulo">
+        <label class="titulo">Registrar Factura</label>
+    </div>
 
     <!-- Formulario de Registro -->
     <form id="formulario">
-        
-        Fecha: <input type="text" name="cedula">
-        
-        <!-- Listado de clientes -->
-        Cliente:
-        <select name="identificador_cliente">
-            
-            <option value="0">Seleccione...</option>
-            <?php
-                foreach($listadoClientes as $cliente){
-                ?>
-                <option value="<?php print $cliente["identificador"]; ?>">
-                    <?php print $cliente["nombre"]; ?>
-                </option>
-                <?php
-            }
-            ?>
-            
-        </select>
-        
-        <!-- Listado de vehiculos -->
-        Vehiculo:
-        <select name="identificador_vehiculo" disabled>
-            <option value="0">Seleccione...</option>
-        </select>
+        <table class="tabla_registro">
+            <tr>
+                <td>Fecha: </td>
+                <td><input type="text" name="fecha"></td>
+            </tr>
+            <tr>
+                <td>Cliente: </td>
+                <td>
+                    <select name="identificador_cliente">
+                        <option value="0">Seleccione...</option>
+                        <?php
+                            foreach($listadoClientes as $cliente){
+                            ?>
+                                <option value="<?php print $cliente["identificador"]; ?>">
+                                    <?php print $cliente["nombre"]; ?>
+                                </option>
+                            <?php
+                            }
+                        ?>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Vehiculo: </td>
+                <td>
+                    <select name="identificador_vehiculo" disabled>
+                        <option value="0">Seleccione...</option>
+                    </select>
+                </td>
+            </tr>
+        </<table>
         
     </form>
 
@@ -142,6 +153,31 @@
         <input type="button" id="boton_guardar" value="">
     
     </div>
+
+    <!-- Fila de Servicios -->
+    <tr id="fila_servicio">
+        <td>
+            
+            <select name="identificador_servicio[]">
+            
+                <option value="0">Seleccione...</option>
+                <?php
+                    foreach($listadoServicios as $servicio){
+                    ?>
+                    <option value="<?php print $servicio["identificador"]; ?>">
+                        <?php print $servicio["tipo"]; ?>
+                    </option>
+                    <?php
+                }
+                ?>
+            
+            </select>
+            
+        </td>
+        <td>
+            <input type="text" name="precio_servicio[]">
+        </td>
+    </tr>
 
     </body>
 </html>
