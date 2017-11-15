@@ -150,7 +150,7 @@
                 <th>Precio</th>
             </tr>
             <tr>
-                <td><input type="button" id="boton_agregar" value="+"></td>
+                <td><input type="button" id="boton_agregar" value=""></td>
             </tr>
         </table>
     </form>
