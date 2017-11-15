@@ -45,27 +45,44 @@
         </script>
     </head>
     <body>
+        
+    <!-- Titulo -->
+    <div class="contenedor_titulo">
+        <label class="titulo">Registrar Vehiculo</label>
+    </div>
 
     <!-- Formulario de Registro -->
     <form id="formulario">
-        
-        <!-- Listado de clientes -->
-        Cliente:
-        <select name="identificador_cliente">
-            <?php
-                foreach($listadoClientes as $cliente){
-                ?>
-                <option value="<?php print $cliente["identificador"]; ?>">
-                    <?php print $cliente["nombre"]; ?>
-                </option>
-                <?php
-            }
-            ?>
-        </select>
-        
-        Placa: <input type="text" name="placa">
-        Modelo: <input type="text" name="modelo">
-        Color: <input type="text" name="color">
+        <table class="tabla_registro">
+            <tr>
+                <td>Cliente: </td>
+                <td>
+                    <select name="identificador_cliente">
+                        <?php
+                            foreach($listadoClientes as $cliente){
+                            ?>
+                                <option value="<?php print $cliente["identificador"]; ?>">
+                                    <?php print $cliente["nombre"]; ?>
+                                </option>
+                            <?php
+                            }
+                        ?>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Placa: </td>
+                <td><input type="text" name="placa"></td>
+            </tr>
+            <tr>
+                <td>Modelo: </td>
+                <td><input type="text" name="modelo"></td>
+            </tr>
+            <tr>
+                <td>Color: </td>
+                <td><input type="text" name="color"></td>
+            </tr>
+        </<table>
         
     </form>
 

@@ -45,12 +45,28 @@
         </script>
     </head>
     <body>
+        
+    <!-- Titulo -->
+    <div class="contenedor_titulo">
+        <label class="titulo">Registrar Servicio</label>
+    </div>
 
     <!-- Formulario de Registro -->
     <form id="formulario">
-        Tipo: <input type="text" name="tipo">
-        Duracion: <input type="text" name="duracion">
-        Precio: <input type="text" name="precio">
+        <table class="tabla_registro">
+            <tr>
+                <td>Tipo: </td>
+                <td><input type="text" name="tipo"></td>
+            </tr>
+            <tr>
+                <td>Duracion: </td>
+                <td><input type="text" name="duracion"></td>
+            </tr>
+            <tr>
+                <td>Precio: </td>
+                <td><input type="text" name="precio"></td>
+            </tr>
+        </<table>
     </form>
 
     <!-- Botones -->
