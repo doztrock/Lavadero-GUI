@@ -238,6 +238,33 @@ input[id^="boton_registrar"]:hover {
 
 
 /**
+ * Formulario de detalle
+ */
+
+.tabla_detalle {
+ margin: 0 !important;
+}
+
+.tabla_detalle tr {
+ height: 40px;
+}
+
+.tabla_detalle th {
+ height: 30px;
+ width: 230px;
+ background-color: #215879;
+}
+
+.tabla_detalle select {
+ font-size: 25px;
+}
+
+.tabla_detalle input[type="text"] {
+ font-size: 20px;
+}
+
+
+/**
  * Contenedor de botones "Guardar" y "Cancelar"
  */
 

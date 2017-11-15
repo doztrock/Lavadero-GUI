@@ -40,6 +40,10 @@
                     
                 });
                 
+                $("#boton_agregar").click(function(){
+                    $("table[class='tabla_detalle']").find('tr:last').before($("#fila_servicio").clone());
+                });
+                
                 $("select[name=identificador_cliente]").on('change', function() {
                 
                     var modulo = "vehiculo";
@@ -140,7 +144,15 @@
                 </td>
             </tr>
         </<table>
-        
+        <table class="tabla_detalle">
+            <tr>
+                <th>Servicio</th>
+                <th>Precio</th>
+            </tr>
+            <tr>
+                <td><input type="button" id="boton_agregar" value="+"></td>
+            </tr>
+        </table>
     </form>
 
     <!-- Botones -->
@@ -155,29 +167,27 @@
     </div>
 
     <!-- Fila de Servicios -->
-    <tr id="fila_servicio">
-        <td>
-            
-            <select name="identificador_servicio[]">
-            
-                <option value="0">Seleccione...</option>
-                <?php
-                    foreach($listadoServicios as $servicio){
-                    ?>
-                    <option value="<?php print $servicio["identificador"]; ?>">
-                        <?php print $servicio["tipo"]; ?>
-                    </option>
+    <table style="display:none">
+        <tr id="fila_servicio">
+            <td>
+                <select name="identificador_servicio[]">
+                    <option value="0">Seleccione...</option>
                     <?php
-                }
-                ?>
-            
-            </select>
-            
-        </td>
-        <td>
-            <input type="text" name="precio_servicio[]">
-        </td>
-    </tr>
+                        foreach($listadoServicios as $servicio){
+                        ?>
+                        <option value="<?php print $servicio["identificador"]; ?>">
+                            <?php print $servicio["tipo"]; ?>
+                        </option>
+                        <?php
+                        }
+                    ?>
+                </select>
+            </td>
+            <td>
+                <input type="text" name="precio_servicio[]">
+            </td>
+        </tr>
+    </table>
 
     </body>
 </html>
