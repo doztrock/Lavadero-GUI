@@ -13,6 +13,9 @@ require_once(__DIR__ . "/../modelo/factura.modelo.class.php");
 /* Incluimos el modelo: CLIENTE */
 require_once(__DIR__ . "/../../cliente/modelo/cliente.modelo.class.php");
 
+/* Incluimos el modelo: SERVICIO */
+require_once(__DIR__ . "/../../servicio/modelo/servicio.modelo.class.php");
+
 class Factura{
     
     /* Modelo */
@@ -29,6 +32,7 @@ class Factura{
         /* Invocamos los modelos */
         $this->modelo = new ModeloFactura($this->database);
         $this->modeloCliente = new ModeloCliente($this->database);
+        $this->modeloServicio = new ModeloServicio($this->database);
                 
     }
     
@@ -67,6 +71,9 @@ class Factura{
          
             // Obtenemos el listado de clientes
             $listadoClientes = $this->modeloCliente->obtenerListado();
+
+            // Obtenemos el listado de servicios
+            $listadoServicios = $this->modeloServicio->obtenerListado();
 
 
         /* Incluimos la vista y mostramos el formulario */

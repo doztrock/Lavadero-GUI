@@ -66,6 +66,10 @@
                 <td>Precio: </td>
                 <td><input type="text" name="precio"></td>
             </tr>
+            <tr>
+                <td>IVA: </td>
+                <td><input type="text" name="iva"></td>
+            </tr>
         </<table>
     </form>
 
@@ -79,6 +83,11 @@
         <input type="button" id="boton_guardar" value="">
     
     </div>
+
+    <!-- Fila de Servicios -->
+    <tr id="fila_servicio">
+        <td></td>
+    </tr>
 
     </body>
 </html>

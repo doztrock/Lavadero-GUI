@@ -83,7 +83,7 @@ class Servicio{
          */
          
             // Guardamos la informacion del servicio
-            $resultado = $this->modelo->guardar($servicio["tipo"], $servicio["duracion"], $servicio["precio"]);
+            $resultado = $this->modelo->guardar($servicio["tipo"], $servicio["duracion"], $servicio["precio"], $servicio["iva"]);
 
             // Obtenemos el listado de servicio
             $listadoServicios = $this->modelo->obtenerListado();
