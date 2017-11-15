@@ -69,17 +69,6 @@ th {
 }
 
 
-input[id^="boton_registrar"] {
- border-radius: 10px;
- border: 2px solid #445c73;
- padding: 15px;
- text-align: center;
- margin: 10px;
- cursor: pointer;
- font-weight: bold;
- background-color: #16a085;
- color: white;
-}
 
 
 /**
@@ -102,9 +91,8 @@ input[id^="boton_registrar"] {
  background-color: #21908E !important;
 }
 
-.item :hover {
- font-size: 15px;
- font-weight: bold;
+.item:hover {
+ background-color: #2C3E50 !important;
 }
 
 input[module^="cliente"] {
@@ -131,6 +119,7 @@ input[module^="vehiculo"] {
  background-position: center;
 }
 
+
 /**
  * Boton "Volver"
  */
@@ -149,8 +138,116 @@ input[module^="vehiculo"] {
  background-color: #205879;
 }
 
-
-#tabla_registro{
- 
+#boton_volver:hover {
+ background-color: #2C3E50 !important;
 }
 
+
+/**
+ * Boton "Guardar"
+ */
+
+#boton_guardar {
+ border-radius: 10px;
+ border: 3px solid #16a085;
+ width: 100px;
+ height: 100px;
+ text-align: center;
+ margin: 10px;
+ cursor: pointer;
+ background: url(../img/guardar.png);
+ background-repeat: no-repeat;
+ background-position: center;
+ background-color: #205879;
+}
+
+#boton_guardar:hover {
+ background-color: #2C3E50 !important;
+}
+
+
+/**
+ * Boton "Cancelar"
+ */
+
+#boton_cancelar {
+ border-radius: 10px;
+ border: 3px solid #16a085;
+ width: 100px;
+ height: 100px;
+ text-align: center;
+ margin: 10px;
+ cursor: pointer;
+ background: url(../img/cancelar.png);
+ background-repeat: no-repeat;
+ background-position: center;
+ background-color: #205879;
+}
+
+#boton_cancelar:hover {
+ background-color: #2C3E50 !important;
+}
+
+
+/**
+ * Boton "Registrar"
+ */
+
+input[id^="boton_registrar"] {
+ border-radius: 10px;
+ border: 2px solid #445c73;
+ padding: 15px;
+ text-align: center;
+ margin: 10px;
+ cursor: pointer;
+ font-weight: bold;
+ background-color: #16a085;
+ color: white;
+}
+
+input[id^="boton_registrar"]:hover {
+ background-color: #2C3E50 !important;
+}
+
+
+/**
+ * Formulario de registro
+ */
+
+.tabla_registro {
+ margin: 0 !important;
+}
+
+.tabla_registro tr {
+ height: 40px;
+}
+
+.tabla_registro input[type="text"] {
+ font-size: 20px;
+}
+
+
+/**
+ * Contenedor de botones "Guardar" y "Cancelar"
+ */
+
+.contenedor_botones {
+ position: fixed;
+ bottom: 50px;
+ right: 300px;
+}
+
+
+/**
+ * Titulo de formulario
+ */
+
+.contenedor_titulo {
+ width: 100%;
+ text-align: center;
+ margin-bottom: 40px;
+}
+
+.titulo {
+ font-size: 55px;
+}

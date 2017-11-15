@@ -45,10 +45,15 @@
         </script>
     </head>
     <body>
+        
+    <!-- Titulo -->
+    <div class="contenedor_titulo">
+        <label class="titulo">Registrar Cliente</label>
+    </div>
 
     <!-- Formulario de Registro -->
     <form id="formulario">
-        <table border=1 class="tabla_registro">
+        <table class="tabla_registro">
             <tr>
                 <td>Cedula: </td>
                 <td><input type="text" name="cedula"></td>
@@ -64,11 +69,16 @@
         </<table>
     </form>
 
-    <!-- Boton "Cancelar" -->
-    <input type="button" id="boton_cancelar" value="Cancelar">
+    <!-- Botones -->
+    <div class="contenedor_botones">
 
-    <!-- Boton "Guardar" -->
-    <input type="button" id="boton_guardar" value="Guardar">
+        <!-- Boton "Cancelar" -->
+        <input type="button" id="boton_cancelar" value="">
+
+        <!-- Boton "Guardar" -->
+        <input type="button" id="boton_guardar" value="">
+    
+    </div>
 
     </body>
 </html>
