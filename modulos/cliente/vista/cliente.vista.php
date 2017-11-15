@@ -61,21 +61,6 @@
         ?>
     </table>
     
-    <!-- Resultado del registro de cliente -->
-    <?php
-    
-        if(isset($resultado)){
-            
-            if($resultado == TRUE){
-                print "Cliente registrado exitosamente.<br>";
-            }else{
-                print "Ha ocurrido un error.<br>";
-            }
-            
-        }
-    
-    ?>
-    
     <!-- Boton "Registrar Cliente" -->
     <div class="contenedor_boton_registrar">
         <input type="button" id="boton_registrar_cliente" value="Registrar Cliente">

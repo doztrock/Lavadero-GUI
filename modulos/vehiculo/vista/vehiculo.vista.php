@@ -63,21 +63,6 @@
         ?>
     </table>
     
-    <!-- Resultado del registro de vehiculo -->
-    <?php
-    
-        if(isset($resultado)){
-            
-            if($resultado == TRUE){
-                print "Vehiculo registrado exitosamente.<br>";
-            }else{
-                print "Ha ocurrido un error.<br>";
-            }
-            
-        }
-    
-    ?>
-    
     <!-- Boton "Registrar vehiculo" -->
     <div class="contenedor_boton_registrar">
         <input type="button" id="boton_registrar_vehiculo" value="Registrar Vehiculo">
