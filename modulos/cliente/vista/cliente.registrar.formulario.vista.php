@@ -48,9 +48,20 @@
 
     <!-- Formulario de Registro -->
     <form id="formulario">
-        Cedula: <input type="text" name="cedula">
-        Nombre: <input type="text" name="nombre">
-        Telefono: <input type="text" name="telefono">
+        <table border=1 class="tabla_registro">
+            <tr>
+                <td>Cedula: </td>
+                <td><input type="text" name="cedula"></td>
+            </tr>
+            <tr>
+                <td>Nombre: </td>
+                <td><input type="text" name="nombre"></td>
+            </tr>
+            <tr>
+                <td>Telefono: </td>
+                <td><input type="text" name="telefono"></td>
+            </tr>
+        </<table>
     </form>
 
     <!-- Boton "Cancelar" -->
