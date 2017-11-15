@@ -77,7 +77,9 @@
     ?>
     
     <!-- Boton "Registrar Servicio" -->
-    <input type="button" id="boton_registrar_servicio" value="Registrar Servicio">
+    <div class="contenedor_boton_registrar">
+        <input type="button" id="boton_registrar_servicio" value="Registrar Servicio">
+    </div>
 
     </body>
 </html>

@@ -77,7 +77,9 @@
     ?>
     
     <!-- Boton "Registrar Cliente" -->
-    <input type="button" id="boton_registrar_cliente" value="Registrar Cliente">
+    <div class="contenedor_boton_registrar">
+        <input type="button" id="boton_registrar_cliente" value="Registrar Cliente">
+    </div>
 
     </body>
 </html>

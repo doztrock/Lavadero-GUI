@@ -209,6 +209,12 @@ input[id^="boton_registrar"]:hover {
  background-color: #2C3E50 !important;
 }
 
+.contenedor_boton_registrar {
+ width: 100%;
+ text-align: center;
+ margin-top: 25px;
+}
+
 
 /**
  * Formulario de registro
@@ -250,4 +256,5 @@ input[id^="boton_registrar"]:hover {
 
 .titulo {
  font-size: 55px;
+ color: antiquewhite;
 }

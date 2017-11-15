@@ -71,7 +71,9 @@
     ?>
     
     <!-- Boton "Registrar Factura" -->
-    <input type="button" id="boton_registrar_factura" value="Registrar Factura">
-
+    <div class="contenedor_boton_registrar">
+        <input type="button" id="boton_registrar_factura" value="Registrar Factura">
+    </div>
+    
     </body>
 </html>
