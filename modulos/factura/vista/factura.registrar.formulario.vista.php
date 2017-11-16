@@ -119,7 +119,13 @@
                         "accion": accion,
                         "identificador_servicio": elemento.val()
                     },success: function(data){
-                        elemento.parent().parent().find("input[name='precio_servicio[]']").val(data.precio);
+                        
+                        if(data != null){
+                            elemento.parent().parent().find("input[name='precio_servicio[]']").val(data.precio);
+                        }else{
+                            elemento.parent().parent().find("input[name='precio_servicio[]']").val("");
+                        }
+                        
                     }
                 });
                     

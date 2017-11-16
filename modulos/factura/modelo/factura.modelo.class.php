@@ -29,19 +29,32 @@ class ModeloFactura{
     }
     
     /**
-     *  Guardar la informacion del cliente
+     *  Guardar la informacion de la factura
      */
-     /*
-    public function guardar($cedula, $nombre, $telefono){
+    public function guardar($identificador_cliente, $identificador_vehiculo, $fecha, $detalle){
         
         $resultado = $this->database->consulta(
-            sprintf("INSERT INTO Cliente (cedula, nombre, telefono) VALUES ('%s', '%s', '%s')", $cedula, $nombre, $telefono)
+            sprintf("INSERT INTO Factura (identificador_cliente, identificador_vehiculo, fecha) VALUES ('%s', '%s', '%s')", $identificador_cliente, $identificador_vehiculo, $fecha)
         );
         
+        if($resultado){
+          
+            $identificador_factura = $this->database->getLastID();
+            $listado_detalle = array();
+            
+            for($i=0; $i<count($detalle); $i++){
+                $listado_detalle[] = sprintf("('%s', '%s', '%s')", $identificador_factura, $detalle["servicio"][$i], $detalle["precio"][$i]);
+            }
+            
+            $resultado = $this->database->consulta(
+                sprintf("INSERT INTO FacturaDetalle (identificador_factura, identificador_tipo, precio) VALUES %s", implode(', ', $listado_detalle))
+            );
+
+        }
+
         return $resultado;
     }
 
-    */    
 }
 
 ?>
