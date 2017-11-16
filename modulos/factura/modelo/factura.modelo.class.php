@@ -21,10 +21,11 @@ class ModeloFactura{
      */
     public function obtenerListado(){
         return $this->database->consulta(
-            "SELECT Factura.identificador, Cliente.nombre AS nombre_cliente, Vehiculo.placa AS placa_vehiculo 
+            "SELECT Factura.identificador, Cliente.nombre AS nombre_cliente, Vehiculo.placa AS placa_vehiculo, SUM(FacturaDetalle.precio) AS precio_factura, Factura.fecha AS fecha_factura 
              FROM Factura 
              INNER JOIN Cliente ON Factura.identificador_cliente = Cliente.identificador 
-             INNER JOIN Vehiculo ON Factura.identificador_vehiculo = Vehiculo.identificador"
+             INNER JOIN Vehiculo ON Factura.identificador_vehiculo = Vehiculo.identificador 
+             INNER JOIN FacturaDetalle ON FacturaDetalle.identificador_factura = Factura.identificador"
         );
     }
     

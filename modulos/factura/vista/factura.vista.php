@@ -43,12 +43,20 @@
 
     <!-- Listado de facturas -->
     <table border=1 id="tabla_factura">
+        <tr>
+            <th>Fecha</th>
+            <th>Placa</th>
+            <th>Cliente</th>
+            <th>Precio</th>
+        </tr>
         <?php
             foreach($listadoFacturas as $factura){
             ?>
             <tr>
-                <td><?php print $factura["nombre_cliente"]; ?></td>
+                <td><?php print $factura["fecha_factura"]; ?></td>
                 <td><?php print $factura["placa_vehiculo"]; ?></td>
+                <td><?php print $factura["nombre_cliente"]; ?></td>
+                <td><?php print $factura["precio_factura"]; ?></td>
             <tr>
             <?php
             }
