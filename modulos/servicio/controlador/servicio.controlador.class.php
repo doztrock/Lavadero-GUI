@@ -94,6 +94,30 @@ class Servicio{
 
     }
     
+    /**
+     *  Funcion:    consultarPrecio()
+     * 
+     *  Objetivo:   Consultar el precio de un servicio especifico.
+     * 
+     */
+    public function consultarPrecio(){
+
+        /* Obtenemos el identificador del servicio */
+        $identificador_servicio = $_POST["identificador_servicio"];
+
+        /**
+         * Hacemos uso de las funciones del modelo
+         */
+         
+            // Obtenemos el precio del servicio
+            $precioServicio = $this->modelo->obtenerPrecioPorServicio($identificador_servicio);
+
+
+        /* Incluimos la vista y mostramos el formulario */
+        require_once(__DIR__ . "/../vista/precio_servicio.json.php");
+
+    }
+    
 }
 
 ?>

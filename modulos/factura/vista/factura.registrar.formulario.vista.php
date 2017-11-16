@@ -101,6 +101,25 @@
                 });
 
             });
+            
+            function consultarPrecio(elemento){
+                   
+                var modulo = "servicio";
+                var accion = "consultarPrecio";
+
+                $.ajax({
+                    url: "core/ControladorFrontal.php",
+                    type: "POST",
+                    data: {
+                        "modulo": modulo,
+                        "accion": accion,
+                        "identificador_servicio": elemento.value
+                    },success: function(data){
+                        console.log(data);
+                    }
+                });
+                    
+            }
 
         </script>
     </head>
@@ -170,7 +189,7 @@
     <table style="display:none">
         <tr id="fila_servicio">
             <td>
-                <select name="identificador_servicio[]">
+                <select name="identificador_servicio[]" onchange="consultarPrecio(this)">
                     <option value="0">Seleccione...</option>
                     <?php
                         foreach($listadoServicios as $servicio){

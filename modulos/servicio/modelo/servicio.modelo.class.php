@@ -35,6 +35,18 @@ class ModeloServicio{
         return $resultado;
     }
     
+    public function obtenerPrecioPorServicio($identificador_servicio){
+        
+        $resultado = $this->database->consulta(sprintf(
+            "SELECT (precio + ((precio * iva) / 100)) AS precio 
+             FROM Servicio 
+             WHERE identificador = '%s' 
+             LIMIT 1", $identificador_servicio
+        ));
+        
+        return $resultado[0];
+    }
+    
 }
 
 ?>
