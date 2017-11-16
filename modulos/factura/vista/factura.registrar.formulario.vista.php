@@ -41,7 +41,11 @@
                 });
                 
                 $("#boton_agregar").click(function(){
-                    $("table[class='tabla_detalle']").find('tr:last').before($("#fila_servicio").clone());
+                    
+                    $("table[class='tabla_detalle']").find('tr:last').before(
+                        $("#tabla_oculta").find("tr:last").clone()
+                    );
+                    
                 });
                 
                 $("select[name=identificador_cliente]").on('change', function() {
@@ -113,9 +117,9 @@
                     data: {
                         "modulo": modulo,
                         "accion": accion,
-                        "identificador_servicio": elemento.value
+                        "identificador_servicio": elemento.val()
                     },success: function(data){
-                        console.log(data);
+                        elemento.parent().parent().find("input[name='precio_servicio[]']").val(data.precio);
                     }
                 });
                     
@@ -135,7 +139,7 @@
         <table class="tabla_registro">
             <tr>
                 <td>Fecha: </td>
-                <td><input type="text" name="fecha"></td>
+                <td><input type="text" name="fecha" value="<?php echo date("Y-m-d H:i"); ?>"></td>
             </tr>
             <tr>
                 <td>Cliente: </td>
@@ -186,10 +190,10 @@
     </div>
 
     <!-- Fila de Servicios -->
-    <table style="display:none">
+    <table id="tabla_oculta" style="display:none">
         <tr id="fila_servicio">
             <td>
-                <select name="identificador_servicio[]" onchange="consultarPrecio(this)">
+                <select name="identificador_servicio[]" onchange="consultarPrecio($(this))">
                     <option value="0">Seleccione...</option>
                     <?php
                         foreach($listadoServicios as $servicio){
