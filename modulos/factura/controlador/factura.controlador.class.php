@@ -92,17 +92,19 @@ class Factura{
         $informacion = json_decode($_POST["informacion"]);
         $factura = array();
         $detalleServicio = array();
+        $contador = 0;
 
         foreach($informacion as $dato){
             
             switch ($dato->name) {
                 
                 case "identificador_servicio[]":
-                    $factura["detalle"]["servicio"][] = $dato->value;
+                    $factura["detalle"][$contador]["servicio"] = $dato->value;
                     break;
                 
                 case "precio_servicio[]":
-                    $factura["detalle"]["precio"][] = $dato->value;
+                    $factura["detalle"][$contador]["precio"] = $dato->value;
+                    $contador++;
                     break;
                 
                 default:

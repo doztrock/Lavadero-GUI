@@ -50,10 +50,10 @@ class ModeloFactura{
             $identificador_factura = $this->database->getLastID();
             $listado_detalle = array();
             
-            for($i=0; $i<count($detalle); $i++){
-                $listado_detalle[] = sprintf("('%s', '%s', '%s')", $identificador_factura, $detalle["servicio"][$i], $detalle["precio"][$i]);
+            foreach($detalle as $elemento){
+                $listado_detalle[] = sprintf("('%s', '%s', '%s')", $identificador_factura, $elemento["servicio"], $elemento["precio"]);
             }
-            
+
             $resultado = $this->database->consulta(
                 sprintf("INSERT INTO FacturaDetalle (identificador_factura, identificador_tipo, precio) VALUES %s", implode(', ', $listado_detalle))
             );
