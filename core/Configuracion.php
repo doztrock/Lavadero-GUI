@@ -13,7 +13,7 @@ class Configuracion{
     const ENTORNO = DESARROLLO;
     
     /* Conexion a DB */
-    const DB_HOST = "localhost";
+    const DB_HOST = "lavadero.cwnmy7kdyuoa.us-east-1.rds.amazonaws.com";
     const DB_USUARIO = "lavaderouser";
     const DB_CLAVE = "PwRmgGeb6QBikRy6wWCbHAnTydXX70uK";
     const DB_NOMBRE = "lavadero";
