@@ -66,12 +66,20 @@
                                 
                                 $("select[name=identificador_vehiculo]").empty();
 
-                                $.each(data, function (identificador, vehiculo) {
+                                $("select[name=identificador_vehiculo]").append(
+                                $('<option>', 
+                                    {
+                                        value: 0,
+                                        text: 'Seleccione...'
+                                    })
+                                );
+
+                                $.each(data, function (indice, vehiculo) {
 
                                     $("select[name=identificador_vehiculo]").append(
                                     $('<option>', 
                                         {
-                                            value: identificador,
+                                            value: vehiculo.identificador,
                                             text: vehiculo.placa
                                         })
                                     );

@@ -21,11 +21,18 @@ class ModeloFactura{
      */
     public function obtenerListado(){
         return $this->database->consulta(
-            "SELECT Factura.identificador, Cliente.nombre AS nombre_cliente, Vehiculo.placa AS placa_vehiculo, SUM(FacturaDetalle.precio) AS precio_factura, Factura.fecha AS fecha_factura 
+            "SELECT Factura.identificador, 
+                    Cliente.nombre AS nombre_cliente, 
+                    Vehiculo.placa AS placa_vehiculo, 
+                    Factura.fecha AS fecha_factura, 
+                    IFNULL(
+                        (SELECT SUM(FacturaDetalle.precio) 
+                         FROM FacturaDetalle 
+                         WHERE FacturaDetalle.identificador_factura = Factura.identificador), 0
+                    ) AS precio_factura 
              FROM Factura 
              INNER JOIN Cliente ON Factura.identificador_cliente = Cliente.identificador 
-             INNER JOIN Vehiculo ON Factura.identificador_vehiculo = Vehiculo.identificador 
-             INNER JOIN FacturaDetalle ON FacturaDetalle.identificador_factura = Factura.identificador"
+             INNER JOIN Vehiculo ON Factura.identificador_vehiculo = Vehiculo.identificador"
         );
     }
     
@@ -33,7 +40,7 @@ class ModeloFactura{
      *  Guardar la informacion de la factura
      */
     public function guardar($identificador_cliente, $identificador_vehiculo, $fecha, $detalle){
-        
+
         $resultado = $this->database->consulta(
             sprintf("INSERT INTO Factura (identificador_cliente, identificador_vehiculo, fecha) VALUES ('%s', '%s', '%s')", $identificador_cliente, $identificador_vehiculo, $fecha)
         );
